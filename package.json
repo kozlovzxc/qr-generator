@@ -5,13 +5,13 @@
   ],
   "scripts": {
     "start:api": "yarn --cwd apps/app-api start",
-    "start:platforms": "yarn --cwd apps/app-platforms start",
+    "start:platforms:android": "yarn --cwd apps/appPlatforms android",
     "lint": "yarn lint:api && yarn lint:platforms",
     "lint:api": "yarn --cwd apps/app-api lint",
-    "lint:platforms": "yarn --cwd apps/app-platforms lint",
+    "lint:platforms": "yarn --cwd apps/appPlatforms lint",
     "format": "yarn format:api && yarn format:platforms",
     "format:api": "yarn --cwd apps/app-api format",
-    "format:platforms": "yarn --cwd apps/app-platforms format"
+    "format:platforms": "yarn --cwd apps/appPlatforms format"
   },
   "version": "0.0.0",
   "author": "Nikita Kozlov",
@@ -19,5 +19,8 @@
   "private": true,
   "devDependencies": {
     "prettier": "^2.1.2"
+  },
+  "dependencies": {
+    "effector-react": "^21.0.7"
   }
 }
