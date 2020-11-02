@@ -5,13 +5,15 @@
   ],
   "scripts": {
     "start:api": "yarn --cwd apps/app-api start",
+    "start:api:dev": "yarn --cwd apps/app-api start:dev",
     "start:platforms:android": "yarn --cwd apps/appPlatforms android",
     "lint": "yarn lint:api && yarn lint:platforms",
     "lint:api": "yarn --cwd apps/app-api lint",
     "lint:platforms": "yarn --cwd apps/appPlatforms lint",
     "format": "yarn format:api && yarn format:platforms",
     "format:api": "yarn --cwd apps/app-api format",
-    "format:platforms": "yarn --cwd apps/appPlatforms format"
+    "format:platforms": "yarn --cwd apps/appPlatforms format",
+    "e2e:api": "yarn --cwd apps/app-api test:e2e"
   },
   "version": "0.0.0",
   "author": "Nikita Kozlov",

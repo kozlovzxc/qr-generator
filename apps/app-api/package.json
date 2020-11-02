@@ -13,12 +13,13 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "test:e2e": "jest --config test/jest-e2e.js",
     "lint": "prettier '{src,test}/**/*.{ts,tsx}' -c",
     "format": "yarn lint -w"
   },
   "dependencies": {
     "@nestjs/common": "^7.0.0",
+    "@nestjs/config": "^0.5.0",
     "@nestjs/core": "^7.0.0",
     "@nestjs/platform-express": "^7.0.0",
     "@nestjs/typeorm": "^7.1.4",
@@ -46,7 +47,8 @@
     "ts-loader": "^6.2.1",
     "ts-node": "9.0.0",
     "tsconfig-paths": "^3.9.0",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.4",
+    "webpack-node-externals": "^2.5.2"
   },
   "jest": {
     "moduleFileExtensions": [

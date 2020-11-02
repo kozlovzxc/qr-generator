@@ -15,18 +15,12 @@ describe('AppController (e2e)', () => {
         await app.init();
     });
 
-    beforeEach(async () => {
-        return request(app.getHttpServer()).get('/e2e/transaction/start');
-    });
+    beforeEach(async () => {});
 
-    afterEach(async () => {
-        return request(app.getHttpServer()).get('/e2e/transaction/rollback');
-    });
-
-    it('/ (GET)', () => {
+    it('/notes (GET)', () => {
         return request(app.getHttpServer())
-            .get('/')
+            .get('/notes')
             .expect(200)
-            .expect('Hello World!');
+            .expect([]);
     });
 });
